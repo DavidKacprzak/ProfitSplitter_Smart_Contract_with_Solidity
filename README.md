@@ -1,13 +1,16 @@
-# Profit Splitter Smart Contract with Solidity
+# Profit Splitter Smart Contracts with Solidity
 
 The following smart contracts were built to automate financial operations creating efficiencies and increasing transparency for a company.
 
-* `AssociateProfitSplitter.sol` Pay your Associate-level employees quickly and easily.
-    * Kovan Testnet Address: `0x52742670e8C96ed9790c265B365DA17990Bb6A63`
-* `TieredProfitSplitter.sol` Distribute profits to different tiers of employees.
-    * Kovan Testnet Address: `0xd1D90442b0bc06219e085BBea488Ea2C904a11EB`
-* `DeferredEquityPlan.sol` Distribute company shares for employees in a "deferred equity incentive plan" automatically.
-    * Kovan Testnet Address: `0x8C5fe2c2B01Ec56ba907474819caDBA180B460ad`
+##### [AssociateProfitSplitter.sol](https://github.com/DavidKacprzak/ProfitSplitter_Smart_Contract_with_Solidity/blob/master/AssocciateProfitSplitter.sol) `Kovan Testnet Address:  0x52742670e8C96ed9790c265B365DA17990Bb6A63`
+ Pay your Associate-level employees quickly and easily.
+ 
+
+##### [TieredProfitSplitter.sol](https://github.com/DavidKacprzak/ProfitSplitter_Smart_Contract_with_Solidity/blob/master/TieredProfitSplitter.sol) `Kovan Testnet Address: 0xd1D90442b0bc06219e085BBea488Ea2C904a11EB`
+Distribute profits to different tiers of employees.
+
+##### [DeferredEquityPlan.sol](https://github.com/DavidKacprzak/ProfitSplitter_Smart_Contract_with_Solidity/blob/master/DeferredEquityPlan.sol) `Kovan Testnet Address: 0x8C5fe2c2B01Ec56ba907474819caDBA180B460ad`
+Distribute company shares for employees in a "deferred equity incentive plan" automatically.
 
 ### Prerequisites
 
@@ -199,17 +202,22 @@ function fastforward() public {
     fakenow += 100 days;
 }
 ```
+#### Testing the contract
 
 After deploying the contract click `distributed_shares`. You will see the starting amount is 0 because the vesting period has not been met for any shares to be distributed.
+
 ![Contract3DistibutedSharesStart](Images/Contract3DistibutedSharesStart.jpg)
 
 Click `fastforward` four times to pass the 365 day threshold.
+
 ![Contract3GanacheCreationFF4](Images/Contract3GanacheCreationFF4.jpg)
 
 After clicking `fastforward` four times, click `distribute`, and finally click `distributed_shares` to see that 250 shares have been distributed now that 400 days have passed.
+
 ![Contract3DistibutedSharesAfter4FF](Images/Contract3DistibutedSharesAfter4FF.jpg)
 
 Under the Activity tab of the MetaMask you will see all transations from Contract Deployment to Contract Interaction to Distributions.
+
 ![KovanContract3Interactions](Images/KovanContract3Interactions.jpg)
 
 
